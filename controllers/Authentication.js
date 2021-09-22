@@ -1,14 +1,5 @@
 const graph = require('fbgraph');
 
-// var conf = {
-//     client_id: '414276950190373'
-//     , client_secret: '35b3f99da7558d1d5dfb0895adcc7c35'
-//     , scope: 'email,user_birthday, user_location'
-//     // You have to set http://localhost:3000/ as your website
-//     // using Settings -> Add platform -> Website
-//     , redirect_uri: 'http://localhost:5000/auth'
-// };
-
 const Authenticate = (req, res) => {
 
     // we don't have a code yet
@@ -23,6 +14,7 @@ const Authenticate = (req, res) => {
         });
 
         if (!req.query.error) { //checks whether a user denied the app facebook login/permissions
+
             res.redirect(authUrl);
             console.log('-----------------sucessfull----------')
         } else {  //req.query.error == 'access_denied'
@@ -41,6 +33,7 @@ const Authenticate = (req, res) => {
             , "client_secret": process.env.client_secret
             , "code": req.query.code
         }, function (err, facebookRes) {
+            console.log('facebook response ', facebookRes)
             res.redirect('/UserHasLoggedIn');
         });
     }

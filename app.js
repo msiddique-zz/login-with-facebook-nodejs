@@ -7,6 +7,7 @@ const Authenticate = require('./controllers/Authentication')
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 const { post } = require('request');
+const userData = require('./controllers/userData');
 require("dotenv").config();
 
 
@@ -25,15 +26,10 @@ app.get('/', (req, res) => {
 app.get('/auth', Authenticate);
 
 // user gets sent here after being authorized
-app.get('/UserHasLoggedIn', (req, res) => {
-    res.send('User is logged in')
-});
+app.get('/UserHasLoggedIn', userData);
 
 port = process.env.PORT
 host = process.env.HOST
 
-// app.listen(5000, () => {
-//     console.log('Server listening on port 5000');
-// })
 
 app.listen(port, host, () => { console.log(`Server is listening on ${port}`) })
