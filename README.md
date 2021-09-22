@@ -7,7 +7,8 @@ Go to `https://developers.facebook.com/` and login<br />
 Create app for your project<br /><br />
 
 ## 2- Get your Fcebook App info 
-Go to Settings > basic. Copy 'App ID' & 'App Secret' of your app<br /><br />
+Go to Settings > basic.<br />
+Copy 'App ID' & 'App Secret' of your app<br /><br />
 
 
 ## 3- Install this github-file 
@@ -19,6 +20,7 @@ Paste your 'App ID' and 'App Secret'<br /><br />
 Go to terminal and run <br /><br />
 
 ```
+npm install
 node app.js
 ```
 
