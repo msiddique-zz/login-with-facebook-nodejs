@@ -6,7 +6,7 @@
 Go to `https://developers.facebook.com/` and login<br />
 Create app for your project<br /><br />
 
-## 2- Get your Fcebook App info 
+## 2- Get your Facebook App info 
 Go to Settings > basic.<br />
 Copy 'App ID' & 'App Secret' of your app<br /><br />
 
