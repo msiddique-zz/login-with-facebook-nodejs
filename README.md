@@ -12,7 +12,7 @@ Copy 'App ID' & 'App Secret' of your app<br /><br />
 
 
 ## 3- Install this github-file 
-Open code in editor and go to config/env.js<br />
+Open code in editor and go to .env file<br />
 Paste your 'App ID' and 'App Secret'<br /><br />
 
 
